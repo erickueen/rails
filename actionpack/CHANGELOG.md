@@ -1,8 +1,13 @@
+*   Fixed incorrect output of rails routes when using singular resource.
+    Fixes #26606
+
+    *Erick Reyna*
+
 *   Fixes multiple calls to `logger.fatal` instead of a single call, 
     for every line in an exception backtrace, when printing trace 
     from `DebugExceptions` middleware.
       
-    Fixes #26134  
+    Fixes #26134
 
     *Vipul A M*
    
@@ -18,7 +23,7 @@
 
     *Yuji Yaginuma*
 
-*   Allow keys not found in `RACK_KEY_TRANSLATION` for setting the environment when rendering
+*   Allow keys not found in RACK_KEY_TRANSLATION for setting the environment when rendering
     arbitrary templates.
 
     *Sammy Larbi*

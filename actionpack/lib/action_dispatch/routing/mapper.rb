@@ -1244,11 +1244,11 @@ module ActionDispatch
         # the plural):
         #
         #   GET       /profile/new
-        #   POST      /profile
         #   GET       /profile
         #   GET       /profile/edit
         #   PATCH/PUT /profile
         #   DELETE    /profile
+        #   POST      /profile
         #
         # === Options
         # Takes same options as +resources+.
@@ -1265,7 +1265,6 @@ module ActionDispatch
               yield if block_given?
 
               concerns(options[:concerns]) if options[:concerns]
-
               collection do
                 post :create
               end if parent_resource.actions.include?(:create)
@@ -1273,6 +1272,8 @@ module ActionDispatch
               new do
                 get :new
               end if parent_resource.actions.include?(:new)
+
+
 
               set_member_mappings_for_resource
             end
